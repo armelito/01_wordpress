@@ -1,5 +1,4 @@
-<?php get_header(); //appel du template header.php  ?>
-
+<?php get_header(); ?>
 <div id="content">
     <h1>Contenu Principal</h1>
     <?php
@@ -8,7 +7,7 @@
         while (have_posts()){
             the_post();
     ?>
-            <h1><?php the_title(); ?></h1>
+            <h1><a href="<?= get_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
             <h2>Posté le <?php the_time('F jS, Y') ?></h2>
             <p><?php the_content(); ?></p>
     <?php
@@ -22,4 +21,3 @@
     ?>
 </div> <!-- /content -->
 
-<?php get_footer(); //appel du template footer.php ?>
