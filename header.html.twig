@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="{{site.charset}}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" href="{{site.theme.link}}/assets/styles/header.css">
+    {{wp_head}}
+  </head>
+  
+  <body {{body_class}}>
+    <header id="header">
+      <div class="wrapper">
+        <a href="#">{{site.name}}</a>
+      </div>
+    </header> <!-- header -->
